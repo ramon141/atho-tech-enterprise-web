@@ -37,7 +37,9 @@ function Cover() {
         cleanFields();
       })
       .catch((err) => {
-        alert("O sistema apresentou um erro ao cadastrar o usuário.");
+        const message = err.response?.data?.error?.message || "O sistema apresentou um erro ao cadastrar o usuário.";
+
+        alert(message);
       })
   }
 
@@ -73,6 +75,9 @@ function Cover() {
             </ArgonBox>
             <ArgonBox mb={2}>
               <ArgonInput type="password" id="passwordEnterprise" required placeholder="Senha" />
+            </ArgonBox>
+            <ArgonBox mb={2}>
+              <ArgonInput type="text" id="cpf" required placeholder="CPF/CNPJ" />
             </ArgonBox>
 
             <ArgonBox mt={4} mb={1}>

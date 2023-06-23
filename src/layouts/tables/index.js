@@ -35,6 +35,7 @@ import { ID } from "services/auth";
 import ArgonButton from "components/ArgonButton";
 import { E_MAIL } from "services/auth";
 import { NAME } from "services/auth";
+import { CPF } from "services/auth";
 
 function Tables() {
 
@@ -92,7 +93,7 @@ function Tables() {
       email: E_MAIL,
       first_name: NAME,
       last_name: "",
-      cpf: "05860445237"
+      cpf: CPF
     }
 
     api.post(`/payments/${ID}/generate-intention-payments`, data)
