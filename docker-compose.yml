@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  web:
+    image: atho-tech-enterprise-web:dev
+    container_name: atho-tech-enterprise-web-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - './src:/app/src'
+    ports:
+      - '${PORT}:${PORT}'
+    env_file:
+      - .env
