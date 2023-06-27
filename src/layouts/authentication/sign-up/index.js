@@ -26,8 +26,9 @@ function Cover() {
     const name = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
+    const cpf = e.target[3].value;
 
-    const data = { name, email, password };
+    const data = { name, email, password, cpf };
 
     axios.create({
       baseURL: process.env.REACT_APP_BASE_API_URL,
